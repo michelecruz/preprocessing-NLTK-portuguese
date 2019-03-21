@@ -23,7 +23,8 @@ Brasil!
 Qual é o teu negócio?
 O nome do teu sócio?
 Confia em mim"""
-tokenizer = RegexpTokenizer(r'\w+') #remove os caracteres especiais
+
+tokenizer = RegexpTokenizer(r'\w+') # remove os caracteres especiais
 result = tokenizer.tokenize(unidecode(text)) # remove os acentos
 print(pre_processing(result))
 
