@@ -11,7 +11,7 @@ def pre_processing(text):
     #print("\n STOP WORDS:",ptstopwords)
     stemmer = nltk.stem.RSLPStemmer()
     filtered_text = [t.lower() for t in text] # deixa o texto em minúsculo
-    filtered_text = [t for t in filtered_text if not t in ptstopwords] # remove as stopwords do texto
+    filtered_text = [t for t in filtered_text if t not in ptstopwords] # remove as stopwords do texto
     filtered_text = [str(stemmer.stem(t)) for t in filtered_text] # aplica o processo de stemming no texto
     return filtered_text
  
